@@ -2,7 +2,7 @@
 {
     public interface IWhereClause : IOrderByClause, IPagination
 	{
-		IWhereClause Where(ISqlQueryExpression whereExpression);
-		IWhereClause WhereOr(params ISqlQueryExpression[] whereExpression);
+		IWhereClause Where(ISearchCondition whereExpression);
+		IWhereClause WhereOr(params ISearchCondition[] whereExpression);
 	}
 }

@@ -10,11 +10,11 @@
 			query.Select("id")
 				.Select("name")
 				.From("users")
-				.InnerJoin("group", default(ISqlQueryExpression))
-				.LeftJoin("site", default(ISqlQueryExpression))
-				.Where(default(ISqlQueryExpression).Or(default(ISqlQueryExpression)))
-				.WhereOr(default(ISqlQueryExpression), default(ISqlQueryExpression))
-				.Where(default(ISqlQueryExpression))
+				.InnerJoin("group", default(ISearchCondition))
+				.LeftJoin("site", default(ISearchCondition))
+				.Where(default(ISearchCondition).Or(default(ISearchCondition)))
+				.WhereOr(default(ISearchCondition), default(ISearchCondition))
+				.Where(default(ISearchCondition))
 				.OrderBy("user")
 				.Paging(0, 50);
 		}

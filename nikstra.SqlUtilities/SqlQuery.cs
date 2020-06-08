@@ -17,13 +17,13 @@ namespace nikstra.SqlUtilities
 		ITableClause IFromClause.From(string table) { throw new NotImplementedException(); }
 		ITableClause IFromClause.From(string table, string alias) { throw new NotImplementedException(); }
 
-		ITableClause IJoinClause.InnerJoin(string table, ISqlQueryExpression onExpression) { throw new NotImplementedException(); }
-		ITableClause IJoinClause.InnerJoin(string table, ISqlQueryExpression onExpression, string alias) { throw new NotImplementedException(); }
-		ITableClause IJoinClause.LeftJoin(string table, ISqlQueryExpression onExpression) { throw new NotImplementedException(); }
-		ITableClause IJoinClause.LeftJoin(string table, ISqlQueryExpression onExpression, string alias) { throw new NotImplementedException(); }
+		ITableClause IJoinClause.InnerJoin(string table, ISearchCondition onExpression) { throw new NotImplementedException(); }
+		ITableClause IJoinClause.InnerJoin(string table, ISearchCondition onExpression, string alias) { throw new NotImplementedException(); }
+		ITableClause IJoinClause.LeftJoin(string table, ISearchCondition onExpression) { throw new NotImplementedException(); }
+		ITableClause IJoinClause.LeftJoin(string table, ISearchCondition onExpression, string alias) { throw new NotImplementedException(); }
 
-		IWhereClause IWhereClause.Where(ISqlQueryExpression whereExpression) { throw new NotImplementedException(); }
-		IWhereClause IWhereClause.WhereOr(params ISqlQueryExpression[] whereExpression) { throw new NotImplementedException(); }
+		IWhereClause IWhereClause.Where(ISearchCondition whereExpression) { throw new NotImplementedException(); }
+		IWhereClause IWhereClause.WhereOr(params ISearchCondition[] whereExpression) { throw new NotImplementedException(); }
 
 		IPagination IOrderByClause.OrderBy(params string[] columns) { throw new NotImplementedException(); }
 		IPagination IOrderByClause.OrderByAscending(params string[] columns) { throw new NotImplementedException(); }
